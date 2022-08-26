@@ -1,0 +1,6 @@
+name: ELDependenciMVVMExamples
+version: '${project.version}'
+main: com.ericlam.mc.mvvm.ExamplesPlugin
+api-version: 1.19
+depend: [ ELDependenci-MVVM ]
+description: some example GUI cases for eldependenci mvvm 
