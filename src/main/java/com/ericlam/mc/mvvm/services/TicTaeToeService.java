@@ -4,7 +4,7 @@ import org.bukkit.entity.Player;
 
 import java.util.function.Consumer;
 
-public sealed interface TicTaeToeService permits TicTaeToeServiceImpl {
+public interface TicTaeToeService {
 
     GameBuilder build(Player player);
 

@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.function.Consumer;
 
-public non-sealed class TicTaeToeServiceImpl implements TicTaeToeService {
+public class TicTaeToeServiceImpl implements TicTaeToeService {
 
     private static final int[][][] POSSIBLE_WINS = new int[][][]{
             {{0, 0}, {0, 1}, {0, 2}},

@@ -3,7 +3,7 @@ package com.ericlam.mc.mvvm.services;
 import java.util.List;
 import java.util.function.Consumer;
 
-public sealed interface MultiChatService permits MultiChatServiceImpl {
+public interface MultiChatService {
 
     void subscribeNewMessage(String roomId, String user, MessageListener listener);
 

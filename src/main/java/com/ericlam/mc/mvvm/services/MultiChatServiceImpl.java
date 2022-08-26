@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
-public non-sealed class MultiChatServiceImpl implements MultiChatService {
+public class MultiChatServiceImpl implements MultiChatService {
 
     private final Map<String, Map<String, MessageListener>> messageBus = new ConcurrentHashMap<>();
     private final Map<String, Map<String, Consumer<String>>> participantBus = new ConcurrentHashMap<>();
