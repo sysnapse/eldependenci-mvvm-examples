@@ -37,7 +37,10 @@ public class ChatView implements View {
     }
 
     @RenderView('F')
-    public void renderUser(UIContext context, @PropValue("user") String user, @PropValue("roomId") String id, @StateValue("participants") List<String> participants){
+    public void renderUser(UIContext context,
+                           @PropValue("mvvm.user") String user,
+                           @PropValue("roomId") String id,
+                           @StateValue("participants") List<String> participants){
         var btn = context.createButton();
         List<String> lore = new ArrayList<>();
         lore.add("&eRoomId: &f"+id);

@@ -29,10 +29,9 @@ public class ChatViewModel implements ViewModel {
 
     @Override
     public void init(Player player, Map<String, Object> props) {
-        user = (String) props.get("user");
-        if (!player.getName().equalsIgnoreCase(user)){
-            throw new IllegalStateException("username is not match as player name");
-        }
+
+        // using internal props
+        user = (String) props.get("mvvm.user");
 
         id = (String)props.get("roomId");
         if (id == null || id.isBlank()){
@@ -74,8 +73,13 @@ public class ChatViewModel implements ViewModel {
             });
         }else if (e.isRightClick()){
             var input = state.getInputs();
-            input.remove(input.size() - 1);
-            state.setInputs(input);
+            if (!input.isEmpty()){
+                input.remove(input.size() - 1);
+                state.setInputs(input);
+                e.getWhoClicked().sendMessage("Successfully removed the latest message");
+            }else{
+                e.getWhoClicked().sendMessage("No message to remove.");
+            }
         }
     }
 
